@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f5cdd9b284.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+
+    <title>Bahira University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://lms.bahria.edu.pk/_viewfiles/images/logo.png" type="image/x-icon">
+
+    <style>
+        @media (max-width:700px) {}
+
+        
+
+        body {
+            box-shadow: 10px 10px 5px rgb(161, 163, 161);
+            background-color: rgb(249, 250, 250);
+            border-radius: 15px;
+            font-size: large;
+        }
+
+        input {
+            margin-top: 1%;
+            border-radius: 3px;
+            height: 20px;
+            padding-left: 10px;
+        }
+
+        h1,
+        h2,
+        header,
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            margin: 0%;
+            /* text-shadow: 3px 3px 3px rgb(116, 107, 107); */
+        }
+
+        header {
+            padding: 1.5rem;
+            margin-bottom: 8px;
+            font-size: 22px;
+            box-shadow: 10px 10px 5px rgb(161, 163, 161);
+            font-family: sans-serif;
+        }
+
+        h1,
+        h2,
+        header {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        footer {
+            margin-top: 2%;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        #searchIcon {
+            font-size: 20px;
+            background: none;
+            border: none;
+            color: white;
+            margin-top: 10%;
+        }
+
+        nav {
+            position: sticky;
+            top: 3px;
+            padding: 0.1rem;
+            border-top: 4px solid #333;
+            border-left: 2px solid #333;
+            border-right: 2px solid #333;
+            color: black;
+            font-size: 28px;
+            font-family: 'Tilt Neon', cursive;
+            box-shadow: 10px 10px 5px rgb(161, 163, 161);
+            background-color: rgb(240, 241, 241);
+        }
+
+        h2{
+            font-size: 35px;
+        }
+
+        #nav {
+            width: 100%;
+            display: flex;
+            margin-left: 9.5%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        aside,
+        article {
+            border-left: 2px solid #333;
+            border-radius: 15px;
+
+            box-shadow: 10px 10px 5px rgb(161, 163, 161);
+
+            display: inline-block;
+        }
+
+        aside {
+            width: 19.5%;
+            height: 0%;
+        }
+
+        article {
+            width: 85%;
+            margin-left: 1rem;
+        }
+
+        p{
+            padding: 0.5rem;
+            text-align: justify;
+
+        }
+
+        #para {
+            float: left;
+            width: 70%;
+        }
+
+
+        section {
+            padding: 1rem;
+            display: flex;
+            margin-top: 1rem;
+        }
+
+        #left {
+            text-align: left;
+            font-size: 30px;
+        }
+
+        #logo {
+            float: left;
+        }
+
+        div {
+            float: right;
+        }
+
+        .dashIcon {
+            display: flex;
+            color: white;
+            float: left;
+        }
+
+        .anchor {
+            color: #333;
+        }
+
+        button:hover{
+            cursor: pointer;
+        }
+
+        
+        
+
+        .ahover {
+        background:
+            linear-gradient(
+            to right,
+            rgb(238, 244, 247),
+            rgb(238, 244, 247)
+            ),
+            linear-gradient(
+            to right,
+            #333,
+            #333,
+            #333
+        );
+        background-size: 100% 3px, 0 3px;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 400ms;
+        }
+
+        a:hover {
+        background-size: 0 3px, 100% 3px;
+        }
+
+
+        table{
+            font-size: 24px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        .td{
+            border-bottom-left-radius : 10px;
+            border-bottom-right-radius : 10px;
+        }
+
+
+        a:hover{
+            color: rgb(0, 0, 27); 
+            /* font-weight: 500; */
+        }
+
+        .an{
+            color: #333;
+            font-size: large;
+        }
+
+        li{
+            text-shadow: 2px 2px 4px rgb(160, 157, 157);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        ul{
+            color: black;
+        }
+
+        .op{
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="https://lms.bahria.edu.pk/_viewfiles/images/logo.png" alt="Not found" id="logo" width="80" height="80">
+        <h1 id="top">
+            &ensp;&ensp;&ensp;&ensp;&ensp; Bahria University Islamabad Campus
+            <div>
+                <input type="text" name="" id="search" placeholder="Search here">
+                <button id="searchIcon" class="fa fa-search">
+            </div>
+        </h1>
+
+    </header>
+
+    <nav>
+        <ul type="none" id="nav">
+            <li><a class="anchor fa-solid fa-home" href="#" ></a> <a class="anchor ahover" href="#"> Home</a></li>
+            &ensp;&ensp;&ensp;&ensp;
+            <li><a class="anchor fa-solid fa-book" href="admissions.html" blank="1" target="blank"></a></a> <a class="anchor ahover" href="admissions.html" blank="1" target="blank"> Admissions</a>
+            </li>
+            &ensp;&ensp;&ensp;&ensp;
+            <li><a class="anchor fa-solid fa-question" href="jobs.html" target="blank" blank="1"> </a><a class="ahover anchor" href="jobs.html" target="_blank" blank="1"> Jobs</a>
+            </li>
+            &ensp;&ensp;&ensp;&ensp;
+            <li><a class="anchor fa-solid fa-phone" href="contact.html" blank="1" target="blank"></a> <a blank="1" target="blank" class="anchor ahover" href="contact.html"> Contact
+                    Us</a></li>
+            &ensp;&ensp;&ensp;&ensp;
+            <li><a class="anchor fa-solid fa-users" href="aboutus.html" target="blank" blank="1"> </a><a class="anchor ahover" href="aboutus.html" target="_blank" blank="1">
+                    About Us</a></li>
+            &ensp;&ensp;&ensp;&ensp;
+            <li><a class="anchor fa-solid fa-calendar" href="" target="blank" blank="1"> </a><a class="anchor ahover" href="gym.html" blank="1" target="blank">
+                    Gym</a></li>
+        </ul>
+    </nav>
+
+    <section>
+
+        <aside id="dash">
+            <h2 id="left"><a class="dashIcon  fas fa-bars" href=""></a> &ensp;Dashboard</h2>
+            <table border="1">
+                <tbody>
+                    <tr>
+                        <td>&ensp;
+                            <a class="op an fa-solid fa-exclamation" href="#" ></a>
+                            <a class="op an " href="#" > School Information</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&ensp;
+                            <a class="op an fa-solid fa-calendar" href="#" target="blank"></a>
+                            <a class="op an " href="#" target="blank">Calendar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&ensp;
+                            <a class="op  an fa-solid fa-book" href="#" target="blank"></a>
+                            <a class="op an " href="#" target="blank">Academics</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&ensp;
+                            <a class="op  an fa-solid fa-basketball" href="#" target="blank"></a>
+                            <a class="op an " href="#" target="blank">Extra Curricular Actvts</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&ensp;
+                            <a class=" an fa-solid fa-person" href="studentLogin.html" target="blank"></a>
+                            <a class="an ahover" href="studentLogin.html" target="blank">For Students</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&ensp;
+                            <a class=" an fa-solid fa-person" href="ParentLoginForm.html" target="blank"></a>
+                            <a class="an ahover" href="ParentLoginForm.html" target="blank">For Parents</a>
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td>&ensp;
+                            <a class=" an fa-solid fa-person" href="facultylog.html" target="blank"></a>
+                            <a class="an ahover" href="facultylog.html" target="blank">For Faculty</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&ensp;
+                            <a class="op  an fa-solid fa-cog " href="#" target="blank"></a>
+                            <a class="op an " href="#" target="blank">School Development</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td">&ensp;
+                            <a class="op an fa-solid fa-spinner fa-spin-pulse fa-spin-reverse" href="#" target="blank"></a>
+                            <a class="op an " href="#" target="blank">Search</a>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </aside>
+
+        <article>
+            <h2>University News</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum non, soluta minima sapiente doloribus
+                deserunt voluptas accusantium eaque possimus ipsa? Facere eaque fuga nam consequatur delectus! Dolorum
+                optio pariatur veritatis?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus saepe
+                nihil sit error nostrum laboriosam! Molestiae atque expedita omnis perspiciatis, sint soluta asperiores
+                exercitationem debitis commodi inventore obcaecati ut quibusdam beatae dolorum eius voluptate. Ratione,
+                aspernatur in voluptates voluptate ullam doloribus iusto nam cupiditate eveniet perspiciatis labore
+                laudantium repudiandae asperiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+                numquam placeat sequi eius inventore corrupti, a, consequatur esse nemo sunt nostrum? Quisquam quibusdam
+                quaerat, delectus accusamus rerum, dolores pariatur repellat similique doloribus aspernatur sequi
+                voluptatum ratione? Vitae architecto laudantium amet dolorem ea aliquam laboriosam voluptates. Eaque
+                animi dicta architecto nulla pariatur, nostrum ipsa optio velit porro, tempora maiores expedita illum
+                quas officia est officiis cum praesentium quia cupiditate reprehenderit deleniti facilis veniam
+                assumenda laboriosam! Odio explicabo, eaque, est voluptate facilis, voluptatum ea impedit omnis tempore
+                accusantium adipisci dolor praesentium excepturi consectetur enim similique neque expedita
+                exercitationem accusamus tenetur necessitatibus rem!</p>
+        </article>
+
+    </section>
+
+    <section>
+
+        <aside id="events">
+            <h2>Upcoming Events</h2>
+            <ul> 
+                            <li> <u> Dec 19, </u><br>&emsp;&emsp;
+                                <span class="fa-solid fa-computer"></span> <b> Last Day Of Classes </b> </li>
+                            <br>
+                            <li> <u> Jan 05, </u><br>&emsp;&emsp; 
+                                <span class="fa-solid fa-school"></span><b> First Day of Classes &emsp; </b></li>
+                            <br>
+                            <li> <u> March 23, </u><br>&emsp;&emsp; 
+                                <span class="fa-solid fa-flag"></span><b> Pakistan's Day &emsp; </b></li>
+                            <br>
+                    </ul>
+        </aside>
+
+        <article>
+            <h2>Welcome to our University</h2>
+            <p id="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo cumque obcaecati ipsa fuga totam
+                temporibus modi mollitia, autem provident doloremque assumenda neque iure quas iste dolore rerum omnis
+                blanditiis pariatur quasi voluptas consectetur? Voluptate fugit optio voluptatem aliquam sunt modi
+                quisquam accusamus accusantium deleniti eius! Rerum, corporis, totam consectetur perferendis mollitia
+                esse saepe non quod blanditiis neque omnis quae suscipit? Cum non, tempora eligendi sit incidunt, neque
+                illum aspernatur veniam unde perspiciatis explicabo saepe! Enim ab optio quam quod, accusamus rerum quos
+                nemo. Veritatis, repudiandae sint quisquam minus voluptate debitis eaque ea suscipit dignissimos vero
+                quam unde asperiores eius ab? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis quam molestias optio reiciendis! Aut, reprehenderit! Eveniet ipsum sit minima alias cumque voluptatum repellat corrupti assumenda, dolorem debitis fuga maiores enim sed suscipit tempore. Ad architecto deleniti cumque nostrum officiis excepturi eos numquam nam possimus dolore quo inventore atque cupiditate earum, sit, assumenda, sint voluptates libero porro dolores repellat tempora at.</p>
+            <img src="https://th.bing.com/th/id/R.b394e0b27aceb3b360b3290a86a83889?rik=GrKFWzD3jmm8Vg&pid=ImgRaw&r=0" alt="Bahria University" width="274" height="250">
+        </article>
+
+    </section>
+
+    <footer>
+        Copyright@bahria.edu.pk<br>
+        Contact: 051-4462956<br>
+        Designed By: Muhammad Abdullah Abbasi
+    </footer>
+
+</body>
+
+</html>

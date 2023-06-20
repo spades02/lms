@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Submission Success</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/f5cdd9b284.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="https://lms.bahria.edu.pk/_viewfiles/images/logo.png" type="image/x-icon">
+
+  <style>
+    /* Global Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  color: #fff;
+}
+
+h2, p {
+  color: #333;
+}
+
+header {
+  background-color: green;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+section.success {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  border: 5px solid green;
+}
+
+i{
+  border: 5px solid green;
+  border-radius: 50%;
+  padding: 5px;
+  color: green;
+}
+
+h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+form{
+    padding: 5px;
+    margin: 3px;
+    align-items: center;
+}
+
+input[type="text"],input[type="password"]{
+padding: 4px;
+font-size: 15px;
+}
+
+input[type="submit"] {
+    padding: 8px;
+    background-color: green;
+    border-radius: 4px;
+    color: white;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Jobs</h1>
+  </header>
+
+  <section class="success">
+    <div class="container">
+      <h2> <i class="fa fa-check" aria-hidden="true"></i> Submitted Successfully</h2>
+      <p>Thank you for your submission!</p>
+      <form action="/rollfaculty" method="POST">
+        <br />
+        <label for="enrollment">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter Same As Previous" required><br>
+        <br />
+        <br />
+        <label for="enrollment">Enrollment:</label>
+        <input type="text" id="enrollment" name="enrollment" readonly><br>
+        <br />
+    
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <br />
+    
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </section>
+
+  <script>
+
+const randomVar = Math.floor(Math.random() * (10000 - 1000 + 1)) + 1000;
+const randomVar1 = Math.floor(Math.random() * (10000 - 1000 + 1)) + 1000;
+const randp = `bahria@${randomVar}`;
+const randp1 = `pass@${randomVar1}`;
+
+    document.getElementById('enrollment').value = randp;
+
+    document.getElementById('password').value = randp1;
+    </script>
+</body>
+</html>

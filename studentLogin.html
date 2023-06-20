@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentLoginForm</title>
+    <link rel="icon" href="https://lms.bahria.edu.pk/_viewfiles/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="loginForm.css">
+    <script src="https://kit.fontawesome.com/f5cdd9b284.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>       
+        <h1><i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;Student Login</h1>
+    </header>
+
+    <section class="login">
+        <div class="container">
+          <form action="/login" method="post">
+            <div class="form-group">
+              <label for="id"><i class="fa-solid fa-lock"></i> ID:</label>
+              <input type="text" id="enrollment" name="enrollment" placeholder="Enter your ID" required>
+            </div>
+    
+            <div class="form-group">
+              <label for="password"><i class="fa-regular fa-solid fa-key"></i> Password:</label>
+              <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+    
+            <div class="form-group">
+              <label for="user-type"><i class="fa-solid fa-square-check"></i> Category:</label>
+              <select id="user-type" name="user-type" required>
+                <option value="" disabled selected>Select</option>
+                <option value="student">Student</option>
+              </select>
+            </div>
+    
+            <div class="form-group">
+              <label for="institute"><i class="fa-solid fa-building-columns"></i> Campus:</label>
+              <select id="institute" name="institute" required>
+                <option value="" disabled selected>Select</option>
+                    <option value="">Health Sciences Campus(Karachi)</option>
+                    <option value="">NCMPR</option>
+                    <option value="">Islamabad</option>
+                    <option value="">IPP Karachi</option>
+                    <option value="">Lahore</option>
+                    <option value="">Karachi Campus</option>
+                    <option value="">PN Nursing</option>
+              </select>
+            </div>
+    
+            <div class="form-group">
+              <button type="submit" onclick="clear()">Submit</button>
+              <button type="reset">Reset</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+    <footer>
+        <p>Copyright@bahira.edu.pk</p>
+    </footer>
+
+
+    <script>
+
+      var id = document.getElementById('enrollment');
+      var pass = document.getElementById('password');
+      var user = document.getElementById('user-type');
+      var cat = document.getElementById('institute');
+
+      function clear()
+      {
+        id.textContent="";
+        pass.textContent="";
+        user.textContent="";
+        cat.textContent="";
+      }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginForm.css">
+    <link rel="icon" href="https://lms.bahria.edu.pk/_viewfiles/images/logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/f5cdd9b284.js" crossorigin="anonymous"></script>
+    <title>Contact Us</title>
+
+    <style>
+        
+section.contact {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 150px;
+}
+
+button[type="submit"],
+button[type="reset"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button[type="submit"]:hover{
+  border-radius: 25px;
+}
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1><i class="fa-sharp fa-solid fa-phone"></i> Contact Us</h1>
+    </header>
+
+    <section class="contact">
+        <div class="container">
+          <h2>Contact Us</h2>
+          <form action="contact" method="post">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name">
+            </div>
+    
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email">
+            </div>
+    
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+            </div>
+    
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+    
+
+    <footer>
+        Copyright@bahria.edu.pk<br>
+        Contact: 051-4462956<br>
+        Designed By: Muhammad Abdullah Abbasi
+    </footer>
+
+    
+</body>
+</html>

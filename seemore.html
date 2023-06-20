@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gym</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="https://th.bing.com/th/id/OIP.on71T7eCzMF29W7_X7sPAwHaHa?pid=ImgDet&rs=1" type="image/x-icon">
+  <style>
+    /* Global Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: white;
+}
+h2{
+    color: #333;
+}
+
+header,footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  margin-bottom: 20px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Section-Specific Styles */
+
+.strength, .cardio, .yoga {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.strength h2, .cardio h2, .yoga h2 {
+  margin-top: 0;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+        header img{
+            float: left;
+            height: 100px;
+            width: 100px;
+            margin: 15px;
+            border-radius: 10px;
+        }
+        header h1{
+            font-family: 'Ubuntu';
+            display: inline-block;
+            clear: both;
+            margin-top: 3%;
+            font-size: 40px;
+        }
+
+  </style>
+</head>
+<body>
+    <header>
+        <img src="https://th.bing.com/th/id/R.58ee96d1e3874148e1f4b719331ff5ed?rik=IWQKMufxpQy39A&pid=ImgRaw&r=0" alt="logo">
+        <h1>Bahria University Fitness Gym</h1>
+    </header>
+
+  <section class="strength">
+    <div class="container">
+      <h2>Strength</h2>
+      <div class="image-grid">
+        <img src="https://images.pexels.com/photos/791763/pexels-photo-791763.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Strength Exercise 1">
+        <img src="https://images.pexels.com/photos/1547248/pexels-photo-1547248.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Strength Exercise 2">
+        <img src="https://images.pexels.com/photos/931321/pexels-photo-931321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Strength Exercise 3">
+        <img src="https://images.pexels.com/photos/949126/pexels-photo-949126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Strength Exercise 4">
+      </div>
+    </div>
+  </section>
+
+  <section class="cardio">
+    <div class="container">
+      <h2>Cardio</h2>
+      <div class="image-grid">
+        <img src="https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Cardio Exercise 1">
+        <img src="https://images.pexels.com/photos/853247/pexels-photo-853247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Cardio Exercise 2">
+        <img src="https://images.pexels.com/photos/3836831/pexels-photo-3836831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Cardio Exercise 3">
+        <img src="https://images.pexels.com/photos/7031705/pexels-photo-7031705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Cardio Exercise 4">
+      </div>
+    </div>
+  </section>
+
+  <section class="yoga">
+    <div class="container">
+      <h2>Yoga</h2>
+      <div class="image-grid">
+        <img src="https://images.pexels.com/photos/3822906/pexels-photo-3822906.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Yoga Pose 1">
+        <img src="https://images.pexels.com/photos/3822630/pexels-photo-3822630.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Yoga Pose 2">
+        <img src="https://images.pexels.com/photos/3984340/pexels-photo-3984340.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Yoga Pose 3">
+        <img src="https://images.pexels.com/photos/460307/pexels-photo-460307.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Yoga Pose 4">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Copyright@bahria.edu.pk<br>
+    Contact: 051-4462956<br>
+    Designed By: Muhammad Abdullah Abbasi
+</footer>
+</body>
+</html>

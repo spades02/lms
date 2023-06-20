@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f5cdd9b284.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="https://lms.bahria.edu.pk/_viewfiles/images/logo.png" type="image/x-icon">
+
+    <title>Exam Management System</title>
+    <style>
+        a:hover{
+            cursor: pointer;
+        }
+        #logo{
+            font-size: 50px; /* Set the desired font size */
+      width: 50px; /* Set the desired width */
+      height: 50px; /* Set the desired height */
+      float: left;
+      padding-left: 30px;
+      padding-top: 10px;
+        }
+        header {
+            display: flex;
+            
+            font-size: 22px;
+            box-shadow: 10px 10px 5px rgb(161, 163, 161);
+            font-family: sans-serif;
+            margin-bottom: 0%;
+
+        }
+
+        h1,
+        header {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        footer{
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: 10px 10px 5px rgb(161, 163, 161);
+
+        }
+
+        h1,
+        header,
+        footer {
+            text-align: center;
+            background-color: green;
+            color: white;
+            padding: 1rem;
+            margin: 0%;
+            text-shadow: 3px 3px 3px rgb(116, 107, 107);
+        }
+
+        section{
+            margin-top: 20px;
+            /* border: 2px solid black; */
+        }
+        #top{
+            margin-left: 200px;
+        }
+        .options {
+        display: none;
+        flex-direction: column;
+        margin-top: 70px;
+        align-items: center;
+        width: 50%;
+        margin-left: 150px;
+        }
+
+        .option {
+        width: 200px;
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: lightblue;
+        text-align: center;
+        cursor: pointer;
+        }
+
+        #hd{
+            background-color: white;
+            color: black;
+            box-shadow: none;
+            text-shadow: none;
+            font-size: 40px;
+            /* margin-bottom: 0%; */
+            /* border: 2px solid black; */
+        }
+
+        .option:hover {
+            background-color: lightcyan;
+        color: black;
+        /* border: 0.1px solid black; */
+        }
+
+        #dashboard{
+            margin-right: 200px;
+        }
+
+        #dashboard,.dashIcon{
+            background-color: black;
+            width: 16%;
+            color: white;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .dashIcon{
+            width: 25%;
+            font-size: 24px;
+
+        }
+
+        .dashIcon:hover{
+            cursor: pointer;
+        }
+
+        .sidebar{
+            display: none;
+        }
+
+
+    
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  /* display: none;  */
+
+}
+
+.sidebar li{
+    margin-top: 10px;
+}
+
+.sidebar li a {
+  text-decoration: none;
+  color: white;
+  margin-left: 30px;
+font-size: 20px;
+}
+
+.sidebar li a:hover {
+  text-decoration: none;
+  color: black;
+  background-color: rgb(255, 235, 211);
+  margin-left: 30px;
+font-size: 20px;
+padding: 5px;
+}
+
+#hide{
+    color: black;
+}
+main{
+    display: flex;
+}
+
+#content{
+    margin-top: 90px;
+    border: 5px solid green;
+    height: 30%;
+    padding: 10px;
+}
+
+#content h1{
+    color: green;
+    background-color: white;
+    font-size: 44px;
+    text-shadow: none;
+    font-style: bold;
+}
+
+#content li{
+    color: darkgrey;
+    font-size: 25px;
+}
+
+#paper,#asgn{
+    display: none;
+}
+
+#user{
+      font-size: 70px;
+      margin-left: 270px;
+      margin-top: 20px;
+    }
+
+    #user:hover{
+      cursor: pointer;
+    }
+
+    #submit{
+      background-color: #333;
+      padding: 7.5px;
+      border: 2px solid #333;
+      color: white;
+      margin-top: 5px;
+      margin-right: 5px;
+      float: right;
+      display: none;
+      border-radius: 5px;
+    }
+
+    #submit:hover{
+      cursor: pointer;
+      background-color: white;
+      border: 2px solid #333;
+      color: #333;
+      border-radius: 10px;
+    }
+
+    #paper{
+        margin-left: -5%;
+    }
+
+    .st{
+        padding: 10px;
+        color: white;
+        font-weight: bold;
+        background-color: green;
+        border: none;
+        font-size: larger;
+        border-radius: 5px;
+    }
+
+    .st:hover{
+        cursor: pointer;
+        border-radius: 15px;
+        background-color: rgb(1, 155, 1);
+
+    }
+    </style>
+</head>
+<body>
+
+    <header>
+        <i id="logo" class="fa fa-clipboard" aria-hidden="true" ></i>
+        <h1 id="top">
+            &ensp;&ensp;&ensp;&ensp;&ensp; Exams Management System
+        </h1>
+        <i id="user" class="fa fa-user-circle" onclick="log()"></i>
+
+    </header>
+    <form action="/logout" method="get">
+        <button id="submit" name="submit">Logout</button>
+      </form>
+
+    <main> 
+
+    <aside id="dashboard">
+        <h2 ><i class="dashIcon  fas fa-bars" onclick="disp()"></i> Dashboard</h2>
+        
+        <div class="sidebar" id="sidebar">
+            <ul>
+              <li><a onclick="paper()">Paper</a></li>
+              <li><a onclick="asgn()">Assignment (Asgn)</a></li>
+              <li><a onclick="quiz()">Quiz</a></li>
+              
+            </ul>
+          </div>
+          <div>
+            <ul>
+                <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+              <li id="hide">a</li>
+            </ul>
+          </div>
+    </aside>
+
+    <!-- <h1 id="hd">Choose A Format</h1> -->
+
+    <nav id="content">
+        <h1>Welcome to Examination System</h1>
+        
+    </nav>
+
+    <form action="/fileget" method="get" class="options" id="paper">
+        <button class="st">View Uploaded Papers</button>
+    </form>
+    <form action="/fileget1" method="get" class="options" id="asgn">
+        <button class="st">View Uploaded Asgn</button>
+    </form>
+    <form class="options" id="quiz">
+        <button class="st">View Uploaded Quizes</button>
+    </form>
+    
+    </main>
+    
+      <script>
+        function redirectToPage(pageUrl) {
+  window.location.href = pageUrl;
+        }
+
+  function disp()
+  {
+    const v = document.getElementById('sidebar');
+    if(v.style.display === "none")
+    {
+    v.style.display = "block";
+    } 
+    else{
+    v.style.display = 'none';
+    }
+    
+  }
+
+  function paper(){
+        const div1 = document.getElementById('quiz');
+        const div2 = document.getElementById('content');
+        const div3 = document.getElementById('paper');
+        const div4 = document.getElementById('asgn');
+        div1.style.display = "none";
+        div2.style.display = "none";
+        div3.style.display = "flex";
+        div4.style.display = "none";
+    }
+
+    function asgn(){
+        const div1 = document.getElementById('quiz');
+        const div2 = document.getElementById('content');
+        const div3 = document.getElementById('paper');
+        const div4 = document.getElementById('asgn');
+        div1.style.display = "none";
+        div2.style.display = "none";
+        div3.style.display = "none";
+        div4.style.display = "block";
+    }
+
+  
+    function quiz(){
+        const div1 = document.getElementById('quiz');
+        const div2 = document.getElementById('content');
+        const div3 = document.getElementById('paper');
+        const div4 = document.getElementById('asgn');
+        div1.style.display = "block";
+        div2.style.display = "none";
+        div3.style.display = "none";
+        div4.style.display = "none";
+    }
+
+    function log()
+    {
+      const v = document.getElementById('submit');
+      submit.style.display = 'block';
+    }
+      </script>
+      
+
+    
+    <footer>
+        Copyright@bahria.edu.pk<br>
+        Contact: 051-4462956<br>
+        Designed By: Muhammad Abdullah Abbasi
+    </footer>
+        
+</body>
+</html>

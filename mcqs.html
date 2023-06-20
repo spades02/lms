@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f5cdd9b284.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="https://lms.bahria.edu.pk/_viewfiles/images/logo.png" type="image/x-icon">
+    <title>Quiz Management System</title>
+    <style>
+        #logo{
+            font-size: 50px; /* Set the desired font size */
+      width: 50px; /* Set the desired width */
+      height: 50px; /* Set the desired height */
+      float: left;
+      padding-left: 30px;
+      padding-top: 10px;
+        }
+        header {
+            display: flex;
+            
+            font-size: 22px;
+            box-shadow: 10px 10px 5px rgb(161, 163, 161);
+            font-family: sans-serif;
+            margin-bottom: 0%;
+
+        }
+
+        h1,
+        header {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        footer{
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: 10px 10px 5px rgb(161, 163, 161);
+
+        }
+
+        h1,
+        header,
+        footer {
+            text-align: center;
+            background-color: green;
+            color: white;
+            padding: 1rem;
+            margin: 0%;
+            text-shadow: 3px 3px 3px rgb(116, 107, 107);
+        }
+
+        #top{
+            margin-left: 200px;
+        }
+
+        section.quiz {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container {
+  margin-bottom: 20px;
+}
+
+.question {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #555;
+}
+        
+       
+
+
+    #questionNum{
+        font-weight: bold;
+    }
+    #ai{
+        background-color: green;
+        margin-left: 30%;
+
+        }
+        #ai:hover{
+        background-color: rgb(151, 226, 151);
+        color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <i id="logo" class="fa fa-clipboard" aria-hidden="true" ></i>
+        <h1 id="top">
+            &ensp;&ensp;&ensp;&ensp;&ensp; Quiz Management System
+        </h1>
+
+    </header>
+    
+    <section class="quiz">
+        <div class="container">
+          <h2>Multiple Choice Question</h2>
+      <button type="submit" id="ai"><i class="fa fa-plus" aria-hidden="true"></i> Generate Using AI</button>
+
+          <form action="success.html">
+            <div class="question">
+              <label for="statement" id="questionNum">Question:</label>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</p>
+            </div>
+    
+            <div class="question">
+              <label for="option1">
+                <input type="radio" id="option1" name="option" value="option1">
+                Option 1
+              </label>
+            </div>
+    
+            <div class="question">
+              <label for="option2">
+                <input type="radio" id="option2" name="option" value="option2">
+                Option 2
+              </label>
+            </div>
+    
+            <div class="question">
+              <label for="option3">
+                <input type="radio" id="option3" name="option" value="option3">
+                Option 3
+              </label>
+            </div>
+    
+            <div class="question">
+              <label for="option4">
+                <input type="radio" id="option4" name="option" value="option4">
+                Option 4
+              </label>
+            </div>
+
+            
+            <div class="question">
+              <label for="statement" id="questionNum">Question:</label>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</p>
+            </div>
+    
+            <div class="question">
+              <label for="option1">
+                <input type="radio" id="option1" name="option" value="option1">
+                Option 1
+              </label>
+            </div>
+    
+            <div class="question">
+              <label for="option2">
+                <input type="radio" id="option2" name="option" value="option2">
+                Option 2
+              </label>
+            </div>
+    
+            <div class="question">
+              <label for="option3">
+                <input type="radio" id="option3" name="option" value="option3">
+                Option 3
+              </label>
+            </div>
+    
+            <div class="question">
+              <label for="option4">
+                <input type="radio" id="option4" name="option" value="option4">
+                Option 4
+              </label>
+            </div>
+
+            <div class="question">
+                <label for="statement" id="questionNum">Question:</label>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</p>
+              </div>
+      
+              <div class="question">
+                <label for="option1">
+                  <input type="radio" id="option1" name="option" value="option1">
+                  Option 1
+                </label>
+              </div>
+      
+              <div class="question">
+                <label for="option2">
+                  <input type="radio" id="option2" name="option" value="option2">
+                  Option 2
+                </label>
+              </div>
+      
+              <div class="question">
+                <label for="option3">
+                  <input type="radio" id="option3" name="option" value="option3">
+                  Option 3
+                </label>
+              </div>
+      
+              <div class="question">
+                <label for="option4">
+                  <input type="radio" id="option4" name="option" value="option4">
+                  Option 4
+                </label>
+              </div>
+
+              <div class="question">
+                <label for="statement" id="questionNum">Question:</label>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</p>
+              </div>
+      
+              <div class="question">
+                <label for="option1">
+                  <input type="radio" id="option1" name="option" value="option1">
+                  Option 1
+                </label>
+              </div>
+      
+              <div class="question">
+                <label for="option2">
+                  <input type="radio" id="option2" name="option" value="option2">
+                  Option 2
+                </label>
+              </div>
+      
+              <div class="question">
+                <label for="option3">
+                  <input type="radio" id="option3" name="option" value="option3">
+                  Option 3
+                </label>
+              </div>
+      
+              <div class="question">
+                <label for="option4">
+                  <input type="radio" id="option4" name="option" value="option4">
+                  Option 4
+                </label>
+              </div>
+
+              <div class="question">
+                <label for="statement" id="questionNum">Question:</label>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</p>
+              </div>
+      
+              <div class="question">
+                <label for="option1">
+                  <input type="radio" id="option1" name="option" value="option1">
+                  Option 1
+                </label>
+              </div>
+      
+              <div class="question">
+                <label for="option2">
+                  <input type="radio" id="option2" name="option" value="option2">
+                  Option 2
+                </label>
+              </div>
+      
+              <div class="question">
+                <label for="option3">
+                  <input type="radio" id="option3" name="option" value="option3">
+                  Option 3
+                </label>
+              </div>
+      
+              <div class="question">
+                <label for="option4">
+                  <input type="radio" id="option4" name="option" value="option4">
+                  Option 4
+                </label>
+              </div>
+
+              <div class="question">
+                <label for="statement" id="questionNum">Question:</label>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</p>
+              </div>
+      
+              <div class="question">
+                <label for="option1">
+                  <input type="radio" id="option1" name="option" value="option1">
+                  Option 1
+                </label>
+              </div>
+      
+              <div class="question">
+                <label for="option2">
+                  <input type="radio" id="option2" name="option" value="option2">
+                  Option 2
+                </label>
+              </div>
+      
+              <div class="question">
+                <label for="option3">
+                  <input type="radio" id="option3" name="option" value="option3">
+                  Option 3
+                </label>
+              </div>
+      
+              <div class="question">
+                <label for="option4">
+                  <input type="radio" id="option4" name="option" value="option4">
+                  Option 4
+                </label>
+              </div>
+    
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+  <label for="" id="z"></label>
+
+
+      <footer>
+        Copyright@bahria.edu.pk<br>
+        Contact: 051-4462956<br>
+        Designed By: Muhammad Abdullah Abbasi
+    </footer>
+
+    <script>
+      const get = document.getElementById('z');
+      const a = sessionStorage.getItem('a');
+      const b = sessionStorage.getItem('b');
+      const c = sessionStorage.getItem('c');
+      const d = sessionStorage.getItem('d');
+
+      get.textContent="Generate " + c + " MCQs for the topic " + d + " and the course " + a + " with the level of difficulty " + b;
+  </script>
+</body>
+</html>

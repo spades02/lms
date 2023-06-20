@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz Management System</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/f5cdd9b284.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="https://lms.bahria.edu.pk/_viewfiles/images/logo.png" type="image/x-icon">
+
+  <style>
+    /* Global Styles */
+
+      #logo{
+              font-size: 50px; /* Set the desired font size */
+        width: 50px; /* Set the desired width */
+        height: 50px; /* Set the desired height */
+        float: left;
+        padding-left: 30px;
+        padding-top: 10px;
+        margin-top: 15px;
+      }
+      header {
+              display: flex;
+              
+              font-size: 22px;
+              box-shadow: 10px 10px 5px rgb(161, 163, 161);
+              font-family: sans-serif;
+              margin-bottom: 0%;
+      }
+
+      #top{
+              margin-left: 200px;
+          }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      h2, p {
+        color: #333;
+      }
+
+      h1{
+        color: white;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      section.success {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .container {
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+    #user{
+      font-size: 70px;
+      margin-left: 270px;
+      margin-top: 20px;
+    }
+
+    #user:hover{
+      cursor: pointer;
+    }
+
+    button{
+      background-color: #333;
+      padding: 7.5px;
+      border: 2px solid #333;
+      color: white;
+      margin-top: 5px;
+      margin-right: 5px;
+      float: right;
+      display: none;
+      border-radius: 5px;
+    }
+
+    button:hover{
+      cursor: pointer;
+      background-color: white;
+      border: 2px solid #333;
+      color: #333;
+      border-radius: 10px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <i id="logo" class="fa fa-clipboard" aria-hidden="true" ></i>
+    <h1 id="top">
+        &ensp;&ensp;&ensp;&ensp;&ensp; Quiz Management System
+    </h1>
+    <i id="user" class="fa fa-user-circle" onclick="log()"></i>
+    
+</header>
+<form action="/logout" method="get">
+  <button id="submit" name="submit">Logout</button>
+</form>
+  <section class="success">
+    <div class="container">
+      <h2>Your Quiz Will Appear Here!</h2>
+      <p>Thank you for your logging in!</p>
+      <div id="solution-container"></div>
+    </div>
+  </section>
+
+  <script>
+    function log()
+    {
+      const v = document.getElementById('submit');
+      submit.style.display = 'block';
+    }
+
+    // Fetch the solution file from the server
+    fetch('/solution')
+      .then(response => response.json())
+      .then(data => {
+        // Get the solution file URL
+        const solutionUrl = data.url;
+
+        // Display the solution file in an iframe
+        const iframe = document.createElement('iframe');
+        iframe.src = solutionUrl;
+        iframe.style.width = '100%';
+        iframe.style.height = '600px';
+        document.getElementById('solution-container').appendChild(iframe);
+      })
+      .catch(error => console.log(error));
+  </script>
+</body>
+</html>

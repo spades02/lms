@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gym</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="https://th.bing.com/th/id/OIP.on71T7eCzMF29W7_X7sPAwHaHa?pid=ImgDet&rs=1" type="image/x-icon">
+  <style>
+    /* Global Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: white;
+}
+h2{
+    color: #333;
+}
+
+header,footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  margin-bottom: 20px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Section-Specific Styles */
+
+.strength, .cardio, .yoga {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.strength h2, .cardio h2, .yoga h2 {
+  margin-top: 0;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+        header img{
+            float: left;
+            height: 100px;
+            width: 100px;
+            margin: 15px;
+            border-radius: 10px;
+        }
+        header h1{
+            font-family: 'Ubuntu';
+            display: inline-block;
+            clear: both;
+            margin-top: 3%;
+            font-size: 40px;
+        }
+
+        
+.container {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.registration-form {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"],
+button[type="reset"] {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover,
+button[type="reset"]:hover {
+  background-color: #555;
+}
+
+button[type="submit"] {
+  margin-left: 35%;
+}
+
+  </style>
+</head>
+<body>
+    <header>
+        <img src="https://th.bing.com/th/id/R.58ee96d1e3874148e1f4b719331ff5ed?rik=IWQKMufxpQy39A&pid=ImgRaw&r=0" alt="logo">
+        <h1>Bahria University Fitness Gym</h1>
+    </header>
+
+    <section class="registration-form">
+        <div class="container">
+          <h2>Registration</h2>
+          <form action="gym" method="post">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="form-group">
+              <label for="confirm-password">Confirm Password:</label>
+              <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirm your password" required>
+            </div>
+            <div class="form-group">
+              <label for="dob">Date of Birth:</label>
+              <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+              <label for="gender">Gender:</label>
+              <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <button type="submit">Register</button>
+              <button type="reset">Reset</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+  <footer>
+    Copyright@bahria.edu.pk<br>
+    Contact: 051-4462956<br>
+    Designed By: Muhammad Abdullah Abbasi
+</footer>
+</body>
+</html>
