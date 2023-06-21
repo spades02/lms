@@ -22,7 +22,7 @@ const upload = multer({ storage: storage })
 
 
 const app=express();
-const port= 27017;
+const port= 3000;
 const hostname = '127.0.0.1';
 //EXPRESS RELATED
 app.use('/static' ,express.static('static'));
@@ -30,7 +30,7 @@ app.use(express.static(__dirname));
 app.use(express.urlencoded());
 // Set the view engine
 
-const connectionString = 'mongodb://localhost:27017/';
+const connectionString = 'mongodb+srv://AbdullahZahid:abdullah@mongoshongo.nrpswwo.mongodb.net/';
 mongoose.connect(connectionString, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
